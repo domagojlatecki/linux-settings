@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd">
+<xkbConfigRegistry version="1.1">
+    <layoutList>
+        <layout>
+            <configItem>
+                <name>dl</name>
+                <shortDescription>dl</shortDescription>
+                <description>Custom (DL)</description>
+                <languageList>
+                    <iso639Id>hrv</iso639Id>
+                </languageList>
+            </configItem>
+            <variantList/>
+        </layout>
+    </layoutList>
+</xkbConfigRegistry>
