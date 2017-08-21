@@ -1,0 +1,61 @@
+default partial alphanumeric_keys
+xkb_symbols "basic" {
+
+    name[Group1] = "Custom (DL)";
+    include "level3(ralt_switch)"
+
+    key <TLDE> { [ asciitilde, grave,        exclamdown                    ] };
+    key <AE01> { [ 1,          exclam                                      ] };
+    key <AE02> { [ 2,          quotedbl,     caron,       dead_caron       ] };
+    key <AE03> { [ 3,          numbersign,   asciicircum, dead_circumflex  ] };
+    key <AE04> { [ 4,          dollar,       breve,       dead_breve       ] };
+    key <AE05> { [ 5,          percent,      degree,      dead_abovering   ] };
+    key <AE06> { [ 6,          ampersand,    ogonek,      dead_ogonek      ] };
+    key <AE07> { [ 7,          slash,        grave,       dead_grave       ] };
+    key <AE08> { [ 8,          parenleft,    abovedot,    dead_abovedot    ] };
+    key <AE09> { [ 9,          parenright,   acute,       dead_acute       ] };
+    key <AE10> { [ 0,          questiondown, doubleacute, dead_doubleacute ] };
+    key <AE11> { [ equal,      question,     diaeresis,   dead_diaeresis   ] };
+    key <AE12> { [ plus,       asterisk,     cedilla,     dead_cedilla     ] };
+
+    key <AD01> { [ q,          Q,            ae,          AE               ] };
+    key <AD02> { [ w,          W,            ssharp,      U1E9E            ] };
+    key <AD03> { [ e,          E,            EuroSign                      ] };
+    key <AD04> { [ r,          R                                           ] };
+    key <AD05> { [ t,          T                                           ] };
+    key <AD06> { [ z,          Z,            zcaron,       Zcaron          ] };
+    key <AD07> { [ u,          U,            udiaeresis,   Udiaeresis      ] };
+    key <AD08> { [ i,          I                                           ] };
+    key <AD09> { [ o,          O,            odiaeresis,   Odiaeresis      ] };
+    key <AD10> { [ p,          P,            oslash,       Oslash          ] };
+    key <AD11> { [ braceleft,  bracketleft                                 ] };
+    key <AD12> { [ braceright, bracketright                                ] };
+
+    key <AC01> { [ a,          A,            adiaeresis,   Adiaeresis      ] };
+    key <AC02> { [ s,          S,            scaron,       Scaron          ] };
+    key <AC03> { [ d,          D,            dstroke,      Dstroke         ] };
+    key <AC04> { [ f,          F                                           ] };
+    key <AC05> { [ g,          G                                           ] };
+    key <AC06> { [ h,          H                                           ] };
+    key <AC07> { [ j,          J                                           ] };
+    key <AC08> { [ k,          K                                           ] };
+    key <AC09> { [ l,          L,            lstroke,      Lstroke         ] };
+    key <AC10> { [ semicolon,  colon                                       ] };
+    key <AC11> { [ quotedbl,   apostrophe                                  ] };
+
+    key <AB01> { [ y,          Y                                           ] };
+    key <AB02> { [ x,          X                                           ] };
+    key <AB03> { [ c,          C,            ccaron,       Ccaron          ] };
+    key <AB04> { [ v,          V,            cacute,       Cacute          ] };
+    key <AB05> { [ b,          B                                           ] };
+    key <AB06> { [ n,          N                                           ] };
+    key <AB07> { [ m,          M                                           ] };
+    key <AB08> { [ comma,      less,         Home,         Home            ] };
+    key <AB09> { [ period,     greater,      End,          End             ] };
+    key <AB10> { [ minus,      underscore                                  ] };
+
+    key <BKSL> { [ slash,      backslash                                   ] };
+    key <LSGT> { [ bar,        at,           brokenbar                     ] };
+    key <CAPS> { [ BackSpace,  Delete                                      ] };
+    key <RCTL> { [ Caps_Lock                                               ] };
+};
