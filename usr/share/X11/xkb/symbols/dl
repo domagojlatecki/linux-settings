@@ -50,12 +50,21 @@ xkb_symbols "basic" {
     key <AB05> { [ b,          B                                           ] };
     key <AB06> { [ n,          N                                           ] };
     key <AB07> { [ m,          M                                           ] };
-    key <AB08> { [ comma,      less,         Home,         Home            ] };
-    key <AB09> { [ period,     greater,      End,          End             ] };
+    key <AB08> {
+        symbols[Group1] = [ comma,        less,           H                                   ],
+        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<HOME>, clearmods=all) ]
+    };
+    key <AB09> {
+        symbols[Group1] = [ period,       greater,        E                                   ],
+        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<END>, clearmods=all)  ]
+    };
     key <AB10> { [ minus,      underscore                                  ] };
 
     key <BKSL> { [ slash,      backslash                                   ] };
     key <LSGT> { [ bar,        at,           brokenbar                     ] };
-    key <CAPS> { [ BackSpace,  Delete                                      ] };
+    key <CAPS> {
+        symbols[Group1] = [    BackSpace,                             Delete                              ],
+        actions[Group1] = [    Redirect(key=<BKSP>, clearmods=all),   Redirect(key=<DELE>, clearmods=all) ]
+    };
     key <RCTL> { [ Caps_Lock                                               ] };
 };
