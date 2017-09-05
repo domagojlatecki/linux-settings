@@ -36,11 +36,23 @@ xkb_symbols "basic" {
     key <AC03> { [ d,          D,            dstroke,      Dstroke         ] };
     key <AC04> { [ f,          F                                           ] };
     key <AC05> { [ g,          G                                           ] };
-    key <AC06> { [ h,          H                                           ] };
-    key <AC07> { [ j,          J                                           ] };
-    key <AC08> { [ k,          K                                           ] };
-    key <AC09> { [ l,          L,            lstroke,      Lstroke         ] };
-    key <AC10> { [ semicolon,  colon                                       ] };
+    key <AC06> {
+        symbols[Group1] = [ h,            H,              leftarrow                           ],
+        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<LEFT>, clearmods=all) ]
+    };
+    key <AC07> {
+        symbols[Group1] = [ j,            J,              downarrow                           ],
+        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<DOWN>, clearmods=all) ]
+    };
+    key <AC08> {
+        symbols[Group1] = [ k,            K,              uparrow                             ],
+        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<UP>, clearmods=all)   ]
+    };
+    key <AC09> {
+        symbols[Group1] = [ l,            L,              rightarrow                          ],
+        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<RGHT>, clearmods=all) ]
+    };
+    key <AC10> { [ semicolon,  colon,        lstroke,      Lstroke         ] };
     key <AC11> { [ quotedbl,   apostrophe                                  ] };
 
     key <AB01> { [ y,          Y                                           ] };
