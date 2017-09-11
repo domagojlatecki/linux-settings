@@ -5,7 +5,7 @@ xkb_symbols "basic" {
     include "level3(ralt_switch)"
 
     key <TLDE> { [ asciitilde, grave,        exclamdown                    ] };
-    key <AE01> { [ 1,          exclam                                      ] };
+    key <AE01> { [ 1,          exclam,       U03C0,       U03A0            ] };
     key <AE02> { [ 2,          quotedbl,     caron,       dead_caron       ] };
     key <AE03> { [ 3,          numbersign,   asciicircum, dead_circumflex  ] };
     key <AE04> { [ 4,          dollar,       breve,       dead_breve       ] };
@@ -75,8 +75,8 @@ xkb_symbols "basic" {
     key <BKSL> { [ slash,      backslash                                   ] };
     key <LSGT> { [ bar,        at,           brokenbar                     ] };
     key <CAPS> {
-        symbols[Group1] = [    BackSpace,                             Delete                              ],
-        actions[Group1] = [    Redirect(key=<BKSP>, clearmods=all),   Redirect(key=<DELE>, clearmods=all) ]
+        symbols[Group1] = [ BackSpace,                           Delete                              ],
+        actions[Group1] = [ Redirect(key=<BKSP>, clearmods=all), Redirect(key=<DELE>, clearmods=all) ]
     };
     key <RCTL> { [ Caps_Lock                                               ] };
 };
