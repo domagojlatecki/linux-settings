@@ -25,7 +25,7 @@ xkb_symbols "basic" {
     key <AD05> { [ t,          T                                           ] };
     key <AD06> { [ z,          Z,            zcaron,       Zcaron          ] };
     key <AD07> { [ u,          U,            udiaeresis,   Udiaeresis      ] };
-    key <AD08> { [ i,          I                                           ] };
+    key <AD08> { [ i,          I,            ubreve,       Ubreve          ] };
     key <AD09> { [ o,          O,            odiaeresis,   Odiaeresis      ] };
     key <AD10> { [ p,          P,            oslash,       Oslash          ] };
     key <AD11> { [ braceleft,  bracketleft                                 ] };
@@ -35,7 +35,7 @@ xkb_symbols "basic" {
     key <AC02> { [ s,          S,            scaron,       Scaron          ] };
     key <AC03> { [ d,          D,            dstroke,      Dstroke         ] };
     key <AC04> { [ f,          F                                           ] };
-    key <AC05> { [ g,          G                                           ] };
+    key <AC05> { [ g,          G,            gcircumflex,  Gcircumflex     ] };
     key <AC06> {
         symbols[Group1] = [ h,            H,              leftarrow                                                                    ],
         actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<LEFT>, clearmods=AltGr), Redirect(key=<LEFT>, clearmods=AltGr) ]
@@ -55,13 +55,13 @@ xkb_symbols "basic" {
     key <AC10> { [ semicolon,  colon,        lstroke,      Lstroke         ] };
     key <AC11> { [ quotedbl,   apostrophe                                  ] };
 
-    key <AB01> { [ y,          Y                                           ] };
-    key <AB02> { [ x,          X                                           ] };
+    key <AB01> { [ y,          Y,            scircumflex,  Scircumflex     ] };
+    key <AB02> { [ x,          X,            ccircumflex,  Ccircumflex     ] };
     key <AB03> { [ c,          C,            ccaron,       Ccaron          ] };
     key <AB04> { [ v,          V,            cacute,       Cacute          ] };
-    key <AB05> { [ b,          B                                           ] };
+    key <AB05> { [ b,          B,            hcircumflex,  Hcircumflex     ] };
     key <AB06> { [ n,          N,            ntilde,       Ntilde          ] };
-    key <AB07> { [ m,          M                                           ] };
+    key <AB07> { [ m,          M,            jcircumflex,  Jcircumflex     ] };
     key <AB08> {
         symbols[Group1] = [ comma,        less,           H                                                                            ],
         actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<HOME>, clearmods=AltGr), Redirect(key=<HOME>, clearmods=AltGr) ]
