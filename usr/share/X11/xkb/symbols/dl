@@ -37,20 +37,20 @@ xkb_symbols "basic" {
     key <AC04> { [ f,          F                                           ] };
     key <AC05> { [ g,          G                                           ] };
     key <AC06> {
-        symbols[Group1] = [ h,            H,              leftarrow                           ],
-        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<LEFT>, clearmods=all) ]
+        symbols[Group1] = [ h,            H,              leftarrow                                                                    ],
+        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<LEFT>, clearmods=AltGr), Redirect(key=<LEFT>, clearmods=AltGr) ]
     };
     key <AC07> {
-        symbols[Group1] = [ j,            J,              downarrow                           ],
-        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<DOWN>, clearmods=all) ]
+        symbols[Group1] = [ j,            J,              downarrow                                                                    ],
+        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<DOWN>, clearmods=AltGr), Redirect(key=<DOWN>, clearmods=AltGr) ]
     };
     key <AC08> {
-        symbols[Group1] = [ k,            K,              uparrow                             ],
-        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<UP>, clearmods=all)   ]
+        symbols[Group1] = [ k,            K,              uparrow                                                                      ],
+        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<UP>, clearmods=AltGr),   Redirect(key=<UP>, clearmods=AltGr)   ]
     };
     key <AC09> {
-        symbols[Group1] = [ l,            L,              rightarrow                          ],
-        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<RGHT>, clearmods=all) ]
+        symbols[Group1] = [ l,            L,              rightarrow                                                                   ],
+        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<RGHT>, clearmods=AltGr), Redirect(key=<RGHT>, clearmods=AltGr) ]
     };
     key <AC10> { [ semicolon,  colon,        lstroke,      Lstroke         ] };
     key <AC11> { [ quotedbl,   apostrophe                                  ] };
@@ -63,20 +63,20 @@ xkb_symbols "basic" {
     key <AB06> { [ n,          N                                           ] };
     key <AB07> { [ m,          M                                           ] };
     key <AB08> {
-        symbols[Group1] = [ comma,        less,           H                                   ],
-        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<HOME>, clearmods=all) ]
+        symbols[Group1] = [ comma,        less,           H                                                                            ],
+        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<HOME>, clearmods=AltGr), Redirect(key=<HOME>, clearmods=AltGr) ]
     };
     key <AB09> {
-        symbols[Group1] = [ period,       greater,        E                                   ],
-        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<END>, clearmods=all)  ]
+        symbols[Group1] = [ period,       greater,        E                                                                            ],
+        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<END>, clearmods=AltGr),  Redirect(key=<END>, clearmods=AltGr)  ]
     };
     key <AB10> { [ minus,      underscore                                  ] };
 
     key <BKSL> { [ slash,      backslash                                   ] };
-    key <LSGT> { [ bar,        at,           brokenbar                     ] };
+    key <LSGT> { [ bar,        at,           brokenbar,    None            ] };
     key <CAPS> {
-        symbols[Group1] = [ BackSpace,                           Delete                              ],
-        actions[Group1] = [ Redirect(key=<BKSP>, clearmods=all), Redirect(key=<DELE>, clearmods=all) ]
+        symbols[Group1] = [ BackSpace,            Delete                                ],
+        actions[Group1] = [ Redirect(key=<BKSP>), Redirect(key=<DELE>, clearmods=Shift) ]
     };
     key <RCTL> { [ Caps_Lock                                               ] };
 };
