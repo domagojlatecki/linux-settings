@@ -25,4 +25,4 @@ Keyboard layout described in `usr/share/X11/xkb/symbols/dl` looks like this:
 ```
 Symbol above `ß` is actually `ẞ`, but `ß` is displayed instead because `ẞ` is not rendered as a monospace character.  
 The `⇽` and `⇾` symbols represent `Home` and `End` keys, respectively.  
-Arrows on HJKL are obviously movement keys, same as in Vim.
+Arrows on `h j k l` keys are obviously movement keys, same as in Vim.
