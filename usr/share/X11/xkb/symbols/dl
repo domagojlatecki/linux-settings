@@ -63,11 +63,11 @@ xkb_symbols "basic" {
     key <AB06> { [ n,          N,            ntilde,       Ntilde          ] };
     key <AB07> { [ m,          M,            jcircumflex,  Jcircumflex     ] };
     key <AB08> {
-        symbols[Group1] = [ comma,        less,           H                                                                            ],
+        symbols[Group1] = [ comma,        less,           U21FD                                                                        ],
         actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<HOME>, clearmods=AltGr), Redirect(key=<HOME>, clearmods=AltGr) ]
     };
     key <AB09> {
-        symbols[Group1] = [ period,       greater,        E                                                                            ],
+        symbols[Group1] = [ period,       greater,        U21FE                                                                        ],
         actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<END>, clearmods=AltGr),  Redirect(key=<END>, clearmods=AltGr)  ]
     };
     key <AB10> { [ minus,      underscore                                  ] };
