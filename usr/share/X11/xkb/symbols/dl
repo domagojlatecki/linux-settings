@@ -53,7 +53,14 @@ xkb_symbols "basic" {
         actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<RGHT>, clearmods=AltGr), Redirect(key=<RGHT>, clearmods=AltGr) ]
     };
     key <AC10> { [ semicolon,  colon,        lstroke,      Lstroke         ] };
-    key <AC11> { [ quotedbl,   apostrophe                                  ] };
+    key <AC11> {
+        symbols[Group1] = [ quotedbl,     apostrophe,     U21E9                                                                        ],
+        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<PGDN>, clearmods=AltGr), Redirect(key=<PGDN>, clearmods=AltGr) ]
+    };
+    key <BKSL> {
+        symbols[Group1] = [ slash,        backslash,      U21E7                                                                        ],
+        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<PGUP>, clearmods=AltGr), Redirect(key=<PGUP>, clearmods=AltGr) ]
+    };
 
     key <AB01> { [ y,          Y,            scircumflex,  Scircumflex     ] };
     key <AB02> { [ x,          X,            ccircumflex,  Ccircumflex     ] };
@@ -63,16 +70,15 @@ xkb_symbols "basic" {
     key <AB06> { [ n,          N,            ntilde,       Ntilde          ] };
     key <AB07> { [ m,          M,            jcircumflex,  Jcircumflex     ] };
     key <AB08> {
-        symbols[Group1] = [ comma,        less,           U21FD                                                                        ],
+        symbols[Group1] = [ comma,        less,           U21E6                                                                        ],
         actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<HOME>, clearmods=AltGr), Redirect(key=<HOME>, clearmods=AltGr) ]
     };
     key <AB09> {
-        symbols[Group1] = [ period,       greater,        U21FE                                                                        ],
+        symbols[Group1] = [ period,       greater,        U21E8                                                                        ],
         actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<END>, clearmods=AltGr),  Redirect(key=<END>, clearmods=AltGr)  ]
     };
     key <AB10> { [ minus,      underscore                                  ] };
 
-    key <BKSL> { [ slash,      backslash                                   ] };
     key <LSGT> { [ bar,        at,           brokenbar,    None            ] };
     key <CAPS> {
         symbols[Group1] = [ BackSpace,            Delete                                ],
