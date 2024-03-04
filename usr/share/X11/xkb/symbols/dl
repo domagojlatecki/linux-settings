@@ -4,7 +4,7 @@ xkb_symbols "basic" {
     name[Group1] = "Custom (DL)";
     include "level3(ralt_switch)"
 
-    key <TLDE> { [ asciitilde, grave,        exclamdown                    ] };
+    key <TLDE> { [ asciitilde, grave,        exclamdown,  None             ] };
     key <AE01> { [ 1,          exclam,       U03C0,       U03A0            ] };
     key <AE02> { [ 2,          quotedbl,     caron,       dead_caron       ] };
     key <AE03> { [ 3,          numbersign,   asciicircum, dead_circumflex  ] };
@@ -18,71 +18,42 @@ xkb_symbols "basic" {
     key <AE11> { [ equal,      question,     diaeresis,   dead_diaeresis   ] };
     key <AE12> { [ plus,       asterisk,     cedilla,     dead_cedilla     ] };
 
-    key <AD01> { [ q,          Q,            ae,          AE               ] };
-    key <AD02> { [ w,          W,            ssharp,      U1E9E            ] };
-    key <AD03> { [ e,          E,            EuroSign                      ] };
-    key <AD04> { [ r,          R                                           ] };
-    key <AD05> { [ t,          T                                           ] };
+    key <AD01> { [ q,          Q,            U0105,        U0104           ] };
+    key <AD02> { [ w,          W,            ssharp,       U1E9E           ] };
+    key <AD03> { [ e,          E,            U011B,        U011A           ] };
+    key <AD04> { [ r,          R,            U0159,        U0158           ] };
+    key <AD05> { [ t,          T,            U0165,        U0164           ] };
     key <AD06> { [ z,          Z,            zcaron,       Zcaron          ] };
     key <AD07> { [ u,          U,            udiaeresis,   Udiaeresis      ] };
     key <AD08> { [ i,          I,            ubreve,       Ubreve          ] };
     key <AD09> { [ o,          O,            odiaeresis,   Odiaeresis      ] };
     key <AD10> { [ p,          P,            oslash,       Oslash          ] };
-    key <AD11> { [ braceleft,  bracketleft                                 ] };
-    key <AD12> { [ braceright, bracketright                                ] };
+    key <AD11> { [ braceleft,  bracketleft,  U017C,        U017B           ] };
+    key <AD12> { [ braceright, bracketright, zacute,       Zacute          ] };
 
     key <AC01> { [ a,          A,            adiaeresis,   Adiaeresis      ] };
     key <AC02> { [ s,          S,            scaron,       Scaron          ] };
     key <AC03> { [ d,          D,            dstroke,      Dstroke         ] };
-    key <AC04> { [ f,          F                                           ] };
+    key <AC04> { [ f,          F,            U010F,        U010E           ] };
     key <AC05> { [ g,          G,            gcircumflex,  Gcircumflex     ] };
-    key <AC06> {
-        symbols[Group1] = [ h,            H,              leftarrow                                                                    ],
-        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<LEFT>, clearmods=AltGr), Redirect(key=<LEFT>, clearmods=AltGr) ]
-    };
-    key <AC07> {
-        symbols[Group1] = [ j,            J,              downarrow                                                                    ],
-        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<DOWN>, clearmods=AltGr), Redirect(key=<DOWN>, clearmods=AltGr) ]
-    };
-    key <AC08> {
-        symbols[Group1] = [ k,            K,              uparrow                                                                      ],
-        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<UP>, clearmods=AltGr),   Redirect(key=<UP>, clearmods=AltGr)   ]
-    };
-    key <AC09> {
-        symbols[Group1] = [ l,            L,              rightarrow                                                                   ],
-        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<RGHT>, clearmods=AltGr), Redirect(key=<RGHT>, clearmods=AltGr) ]
-    };
-    key <AC10> { [ semicolon,  colon,        lstroke,      Lstroke         ] };
-    key <AC11> {
-        symbols[Group1] = [ quotedbl,     apostrophe,     U21E9                                                                        ],
-        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<PGDN>, clearmods=AltGr), Redirect(key=<PGDN>, clearmods=AltGr) ]
-    };
-    key <BKSL> {
-        symbols[Group1] = [ slash,        backslash,      U21E7                                                                        ],
-        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<PGUP>, clearmods=AltGr), Redirect(key=<PGUP>, clearmods=AltGr) ]
-    };
+    key <AC06> { [ h,          H,            hcircumflex,  Hcircumflex     ] };
+    key <AC07> { [ j,          J,            jcircumflex,  Jcircumflex     ] };
+    key <AC08> { [ k,          K,            oacute,       Oacute          ] };
+    key <AC09> { [ l,          L,            lstroke,      Lstroke         ] };
+    key <AC10> { [ semicolon,  colon,        U0119,        U0118           ] };
+    key <AC11> { [ quotedbl,   apostrophe,   U20AC,        None            ] };
+    key <BKSL> { [ slash,      backslash,    U00B1,        None            ] };
 
     key <AB01> { [ y,          Y,            scircumflex,  Scircumflex     ] };
     key <AB02> { [ x,          X,            ccircumflex,  Ccircumflex     ] };
     key <AB03> { [ c,          C,            ccaron,       Ccaron          ] };
     key <AB04> { [ v,          V,            cacute,       Cacute          ] };
-    key <AB05> { [ b,          B,            hcircumflex,  Hcircumflex     ] };
-    key <AB06> { [ n,          N,            ntilde,       Ntilde          ] };
-    key <AB07> { [ m,          M,            jcircumflex,  Jcircumflex     ] };
-    key <AB08> {
-        symbols[Group1] = [ comma,        less,           U21E6                                                                        ],
-        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<HOME>, clearmods=AltGr), Redirect(key=<HOME>, clearmods=AltGr) ]
-    };
-    key <AB09> {
-        symbols[Group1] = [ period,       greater,        U21E8                                                                        ],
-        actions[Group1] = [ NoAction(),   NoAction(),     Redirect(key=<END>, clearmods=AltGr),  Redirect(key=<END>, clearmods=AltGr)  ]
-    };
-    key <AB10> { [ minus,      underscore                                  ] };
+    key <AB05> { [ b,          B,            U0148,        U0147           ] };
+    key <AB06> { [ n,          N,            nacute,       Nacute          ] };
+    key <AB07> { [ m,          M,            ntilde,       Ntilde          ] };
+    key <AB08> { [ comma,      less,         ae,           AE              ] };
+    key <AB09> { [ period,     greater,      oe,           OE              ] };
+    key <AB10> { [ minus,      underscore,   brokenbar,    None            ] };
 
-    key <LSGT> { [ bar,        at,           brokenbar,    None            ] };
-    key <CAPS> {
-        symbols[Group1] = [ BackSpace,            Delete                                ],
-        actions[Group1] = [ Redirect(key=<BKSP>), Redirect(key=<DELE>, clearmods=Shift) ]
-    };
-    key <RCTL> { [ Caps_Lock                                               ] };
+    key <LSGT> { [ bar,        at,           sacute,       Sacute          ] };
 };
