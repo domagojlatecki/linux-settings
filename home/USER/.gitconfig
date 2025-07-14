@@ -1,0 +1,9 @@
+[user]
+	name = Domagoj Latečki
+	email = domagoj.latecki@gmail.com
+[core]
+	editor = vim
+[init]
+	defaultBranch = main
+[pager]
+	branch = false
