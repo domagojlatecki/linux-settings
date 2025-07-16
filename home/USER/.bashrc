@@ -6,7 +6,7 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-export PROMPT_COMMAND='__posh_git_ps1 "$(opt_newline_and_exit_code)$(current_java_version)$(bg_job_count)" "\n\[\033[0m\]╰─$(sw_colored_wd)\$ \[\033[0;32m\]";'$PROMPT_COMMAND
+export PROMPT_COMMAND='__posh_git_ps1 "$(opt_newline_and_exit_code)$(current_java_version)$(bg_job_count)$(y_file_count)" "\n\[\033[0m\]╰─$(sw_colored_wd)\$ \[\033[0;32m\]";'$PROMPT_COMMAND
 export PS2='\[\033[0m\]  │\[\033[0;32m\]'
 
 case $- in
