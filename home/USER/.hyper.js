@@ -20,24 +20,57 @@ module.exports = {
         // letter spacing as a relative unit
         letterSpacing: 0,
         // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-        cursorColor: 'rgba(248,28,229,0.8)',
+        cursorColor: "#7e57c2",
         // terminal text color under BLOCK cursor
-        cursorAccentColor: '#000',
+        cursorAccentColor: "#ffffff",
         // `'BEAM'` for |, `'UNDERLINE'` for _, `'BLOCK'` for █
         cursorShape: 'BLOCK',
         // set to `true` (without backticks and without quotes) for blinking cursor
         cursorBlink: false,
         // color of the text
-        foregroundColor: '#fff',
+        foregroundColor: "#d6deeb",
         // terminal background color
         // opacity is only supported on macOS
-        backgroundColor: '#000',
+        backgroundColor: "#011627",
         // terminal selection color
-        selectionColor: 'rgba(248,28,229,0.3)',
+        selectionColor: "rgba(248, 28, 229, 0.3)",
         // border color (window, tabs)
-        borderColor: '#333',
+        borderColor: "rgba(126, 87, 194, 0.3)",
         // custom CSS to embed in the main window
-        css: '',
+        css: `
+            .hyper_main {
+              border: none !important;
+            }
+            .header_header {
+              background-color: rgba(0, 0, 0, .15) !important;
+            }
+            .tabs_borderShim {
+              border-color: transparent !important;
+            }
+            .tab_tab {
+              border: 0;
+              background-color: #010e1a;
+              color: #5f7e97;
+            }
+            .tab_tab::before {
+              background-color: #272B3B;
+            }
+            .tab_active {
+              background-color: #0b2942;
+              color: #d2dee7;
+            }
+            .tab_active::before {
+              background-color: #262A39;
+            }
+            .tab_text {
+              background-color: #010e1a;
+              color: #5f7e97;
+            }
+            .tab_textActive {
+              background-color: #0b2942;
+              color: #d2dee7;
+            }
+        `,
         // custom CSS to embed in the terminal window
         termCSS: '',
         // set custom startup directory (must be an absolute path)
@@ -55,24 +88,22 @@ module.exports = {
         // including the 6 x 6 color cubes and the grayscale map, just provide
         // an array here instead of a color map object
         colors: {
-            black: '#000000',
-            red: '#C51E14',
-            green: '#1DC121',
-            yellow: '#C7C329',
-            blue: '#0A2FC4',
-            magenta: '#C839C5',
-            cyan: '#20C5C6',
-            white: '#C7C7C7',
-            lightBlack: '#686868',
-            lightRed: '#FD6F6B',
-            lightGreen: '#67F86F',
-            lightYellow: '#FFFA72',
-            lightBlue: '#6A76FB',
-            lightMagenta: '#FD7CFC',
-            lightCyan: '#68FDFE',
-            lightWhite: '#FFFFFF',
-            limeGreen: '#32CD32',
-            lightCoral: '#F08080',
+            black: "#011627",
+            red: "#EF5350",
+            green: "#22da6e",
+            yellow: "#addb67",
+            blue: "#82aaff",
+            magenta: "#c792ea",
+            cyan: "#21c7a8",
+            white: "#ffffff",
+            lightBlack: "#575656",
+            lightRed: "#ef5350",
+            lightGreen: "#22da6e",
+            lightYellow: "#ffeb95",
+            lightBlue: "#82aaff",
+            lightMagenta: "#c792ea",
+            lightCyan: "#7fdbca",
+            lightWhite: "#ffffff"
         },
         // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
         // if left empty, your system's login shell will be used by default
@@ -137,7 +168,7 @@ module.exports = {
     //   `hyperpower`
     //   `@company/project`
     //   `project#1.0.1`
-    plugins: ["hyper-night-owl"],
+    plugins: [],
     // in development, you can create a directory under
     // `~/.hyper_plugins/local/` and include it here
     // to load it and avoid it being `npm install`ed
